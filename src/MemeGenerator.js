@@ -7,10 +7,11 @@ class MemeGenerator extends React.Component{
         this.state={
             topText: '',
             bottomText: '',
-            randomImage: 'http://i.imgflip.com/1bij.jpg',
+            randomImage: '',
             allMemeImages: []
         }
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount(){
@@ -25,10 +26,14 @@ class MemeGenerator extends React.Component{
     handleChange(event){
         const {name, value } = event.target;
         this.setState({[name] : value})
-        console.log(value)
 
+    }
 
-
+    handleSubmit(event){
+        event.preventDefault()
+        let random = Math.floor(Math.random() * this.state.allMemeImages.length)
+        let randomMeme = this.state.allMemeImages[random].url
+        this.setState({randomImage: randomMeme})
     }
 
 
@@ -36,7 +41,7 @@ class MemeGenerator extends React.Component{
     render(){
         return(
             <div className = "main">
-                <form className = 'meme-form'>
+                <form className = 'meme-form' onSubmit ={this.handleSubmit}>
                     <input 
                         type='text' 
                         className="top-Text" 
@@ -54,12 +59,12 @@ class MemeGenerator extends React.Component{
                         onChange = {this.handleChange}
                     />
 
-                    <button className="submit">Generate</button>
+                    <button className="submit" >New Image</button>
                 </form>
                 <div className = 'meme'>
-                    <img src = {this.state.randomImage} alt = ''></img>
-                    <h2 className = "top">{this.state.topText}</h2>
-                    <h2 className = "bottom">{this.state.bottomText}</h2>
+                    <img className = 'meme-image' src = {this.state.randomImage} alt = ''></img>
+                    <h2 className = "top">{this.state.topText.toUpperCase()}</h2>
+                    <h2 className = "bottom">{this.state.bottomText.toUpperCase()}</h2>
                 </div>
                 
             </div>
