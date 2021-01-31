@@ -1,5 +1,5 @@
-# Project Name
-> Here goes your awesome project description!
+# Meme Genie
+> Create Your Own Memes!!
 
 ## Table of contents
 * [General info](#general-info)
