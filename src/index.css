@@ -1,13 +1,141 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+Header{
+    display: grid;
+    background-color: rgb(0, 0, 29);
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: -20px;
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.logo {
+    display: grid;
+    grid-row: 1;
+    width: 60px;
+    height: auto;
+    background-color: rgb(87, 57, 57);
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+nav{
+    display: grid;
+    color: white;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+
+}
+
+
+.main{
+    height: 100vh;
+    background-color: rgb(72, 72, 94);
+    margin-top: -23px;
+    display: grid;
+
+
+}
+
+.meme-form {
+    display: grid;
+    height: 600px;
+    padding-top: 80px;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20px;
+    grid-template-rows: repeat(15, 1fr);
+
+
+}
+
+.meme-image{
+    height: 400px;
+    width: auto;
+
+}
+
+.top-Text {
+    padding: 10px;
+    height: 30px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: rgb(81, 72, 124);
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+}
+
+.bottom-Text {
+    align-self: center;
+    padding: 10px;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(81, 72, 124);
+    grid-row: 15;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+}
+
+.submit {
+    justify-self: center;
+    height: 30px;
+    width: 100px;
+    background-color: purple;
+    grid-row: 17;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.85em;
+    
+}
+
+
+.meme{
+    display: flex;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 200px;
+}
+
+
+.top{
+    color: white;
+    font-size: 2.3em;
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.1em;
+  
+}
+
+.bottom{
+    color: white;
+    font-size: 2.3em;
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.1em;
+
+
 }
