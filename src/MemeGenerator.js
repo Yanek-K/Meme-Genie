@@ -10,6 +10,7 @@ class MemeGenerator extends React.Component{
             randomImage: 'http://i.imgflip.com/1bij.jpg',
             allMemeImages: []
         }
+        this.handleChange = this.handleChange.bind(this)
     }
 
     componentDidMount(){
@@ -20,16 +21,47 @@ class MemeGenerator extends React.Component{
             this.setState({ allMemeImages: memes})
         })
     }
+
+    handleChange(event){
+        const {name, value } = event.target;
+        this.setState({[name] : value})
+        console.log(value)
+
+
+
+    }
+
+
+
     render(){
         return(
             <div className = "main">
                 <form className = 'meme-form'>
-                    <input type='text' className="top-Text" name="topText" placeholder="Start your meme here" ></input>
-                    <input type='text' className="bottom-Text" name="bottomText" placeholder="Finsh your meme here" ></input>
+                    <input 
+                        type='text' 
+                        className="top-Text" 
+                        name="topText" 
+                        placeholder="Start your meme here" 
+                        value ={this.state.topText}
+                        onChange = {this.handleChange}
+                    />
+                    <input 
+                        type='text' 
+                        className="bottom-Text" 
+                        name="bottomText" 
+                        placeholder="Finsh your meme here" 
+                        value = {this.state.bottomText}
+                        onChange = {this.handleChange}
+                    />
 
                     <button className="submit">Generate</button>
                 </form>
-                <h1>This is for fetching the API</h1>
+                <div className = 'meme'>
+                    <img src = {this.state.randomImage} alt = ''></img>
+                    <h2 className = "top">{this.state.topText}</h2>
+                    <h2 className = "bottom">{this.state.bottomText}</h2>
+                </div>
+                
             </div>
         )
     }
