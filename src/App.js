@@ -10,7 +10,7 @@ class App extends React.Component {
     render(){
         return(
             <div>
-                <h1>Hello Mr. Light!</h1>
+                <h1></h1>
                 <Header />
                 <MemeGenerator />
             </div>

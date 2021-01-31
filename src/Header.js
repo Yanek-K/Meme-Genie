@@ -6,9 +6,9 @@ import React from 'react'
 function Header(){
         return (
             <header>
-                <img className = 'logo' src = '/assets/images/logo2.png' alt ='logo'/>
+                <img className = 'logo' src = '/assets/images/logo1.jpg' alt ='logo'/>
 
-                <h2>Im the header</h2>
+                <nav>Welcome to Meme Genie</nav>
                 
             </header>
         )
